@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<style>
+</style>
+
+<body>
+    <div id="app">
+        <h1>I earning {{dollar}} per month</h1>
+        <button v-on:click="amount(1)">+1</button>
+        <!-- tips1: short form of v-on:click is @click -->
+        <!-- tips2: for double click event use @dblclick by replacing @click -->
+        <button @click="amount(-1)">-1</button>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                dollar: 20
+            },
+            methods: {
+                amount(taka) {
+                    this.dollar += taka
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

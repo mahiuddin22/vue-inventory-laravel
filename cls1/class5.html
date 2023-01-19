@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .canvus {
+        height: 250px;
+        width: 250px;
+        background-color: rgb(189, 146, 5);
+    }
+</style>
+
+<body>
+    <div id="app">
+        <button @click="me">click me</button>
+        <div class="canvus" @mousemove="move">
+            {{log.x}}, {{log.y}}
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                log: {
+                    x: 0,
+                    y: 0
+                }
+            },
+            methods: {
+                me(event) {
+                    console.log(event);
+                },
+                move(e){
+                    this.log.x = e.offsetX,
+                    this.log.y = e.offsetY
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

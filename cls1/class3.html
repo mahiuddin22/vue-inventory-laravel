@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .one{
+        color: orange;
+    }
+    .two{
+        text-decoration: line-through;
+    }
+</style>
+<body>
+    <div id="app">
+        <!-- shortcode of v-bind:href is :href -->
+        <a v-bind:href="add">Facebook</a>
+        <h1 :class="exampleclasses">chenging colors</h1>
+        <input type="text" :value="exval">
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: { 
+                add: 'https://www.facebook.com/',
+                exampleclasses: ['one','two'],
+                exval: 'type your name'
+            },
+        })
+    </script>
+</body>
+
+</html>

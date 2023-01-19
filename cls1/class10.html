@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<style>
+</style>
+
+<body>
+
+    <div id="app">
+        <!-- simpliest for loop ever in array -->
+        <hr><p>The name list</p>
+        <hr>
+        <!-- always use for loop inside the targeted tag -->
+        <!-- exploring names -->
+        <ol>
+            <li v-for="name in names">{{name}}</li>
+        </ol>
+
+        <hr><p>Fruit list</p><hr>
+        <!-- exploring fruites -->
+        <ul>
+            <li style="background-color:darkgray; padding: 10px;">SL| Name | Color| Weight</li>
+            <!-- to show index of this array then add index with any name after fruit using '(array.index)' brackets -->
+            <li v-for="(fruit, index) in fruits">
+              {{index}} : {{fruit.name}} | {{fruit.color}} | {{fruit.weight}}
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                names: ['noyon', 'shopon', 'shohag', 'sujon', 'kamrul', 'jahid', 'pagla', 'mamun', 'mongil', 'manik',],
+                fruits: [
+                    { name: 'mango', color: 'yellow', weight: '120' },
+                    { name: 'orrage', color: 'yellow', weight: '70' },
+                    { name: 'grave', color: 'white-green', weight: '30' },
+                    { name: 'apple', color: 'red', weight: '65' },
+                    { name: 'pinaple', color: 'rediest yellow', weight: '500' },
+                    { name: 'jackfruit', color: 'dark-yellow', weight: '5000' },
+                    { name: 'guava', color: 'green', weight: '250' }
+                ]
+            },
+            methods: {
+
+            }
+
+        })
+    </script>
+</body>
+
+</html>

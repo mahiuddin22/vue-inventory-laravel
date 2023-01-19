@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<style>
+</style>
+
+<body>
+
+    <div id="app">
+        <!-- to modify the event access just add a '.' after the event and add access modifire -->
+        <button @click.shift="message">hold shift & click</button>
+        <button @click.alt="message">hold alt & click</button>
+        <a href="https://www.youtube.com/" @click.prevent>Youtube</a>
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: "default name",
+            },
+            methods:{
+                message(){
+                    console.log("noyon")
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

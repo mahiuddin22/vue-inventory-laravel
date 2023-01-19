@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<style>
+</style>
+
+<body>
+
+    <div id="app">
+        <!-- simple if contition to check age and name -->
+        <p v-if="name">Learn Hunter</p>
+        <p v-if="age">24</p>
+
+        <!-- show hide using button and method -->
+        <button @click="ShowName">Name {{name}}</button>
+        <button @click="ShowAge">Name {{age}}</button>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: true,
+                age: true
+            },
+            methods:{
+                ShowName(){
+                    this.name = !this.name
+                },
+                ShowAge(){
+                    this.age = !this.age
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>
